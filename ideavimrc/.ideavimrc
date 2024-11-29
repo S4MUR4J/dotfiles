@@ -1,0 +1,58 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+let mapleader='`'
+
+set ignorecase
+set smartcase
+set scrolloff=5
+set incsearch
+set visualbell
+
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+Plug 'terryma/vim-multiple-cursors'
+Plug 'tommcdo/vim-exchange'
+
+Plug 'michaeljsmith/vim-indent-object'
+Plug 'kana/vim-textobj-entire'
+
+nmap gcc :action CommentByLineComment<CR>
+vmap gc :action CommentByLineComment<CR>
+
+nnoremap Y y$
+
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
+nnoremap <c-w> :action CloseEditor<CR>
+
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap gy :action GotoTypeDeclaration<CR>
+nnoremap gi :action ReSharperGotoImplementation<CR> :action GotoImplementation<CR>
+nnoremap gu :action ShowUsages<CR>
+nnoremap gb :action GotoSuperMethod<CR>
+
+nnoremap [g :action GotoPreviousError<CR>
+nnoremap ]g :action GotoNextError<CR>
+nnoremap [c :action VcsShowPrevChangeMarker<CR>
+nnoremap ]c :action VcsShowNextChangeMarker<CR>
+
+nnoremap <TAB> :action NextTab<CR>
+nnoremap <s-TAB> :action PreviousTab<CR>
+nnoremap <leader><leader> :action JumpToLastWindow<CR>
+
+" nnoremap <a-f> :action ReformatCode<CR>
+nnoremap <a-f> :action com.intellij.csharpier.ReformatWithCSharpierAction<CR>
+nnoremap <a-o> :action OptimizeImports<CR>
+nnoremap <a-m> :action Refactorings.QuickListPopupAction<CR>
+
+nnoremap \ :action SearchEverywhere<CR>
+
+nnoremap mb :action Annotate<CR>
+nnoremap mh :action Vcs.ShowTabbedFileHistory<CR>
+
+nnoremap <leader>rn :action RenameElement<CR>

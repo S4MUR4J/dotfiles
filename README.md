@@ -1,36 +1,33 @@
-# My dotfiles
+# 🛠️ S4MUR4J's Dotfiles
 
-This directory contains the dotfiles for my system
+This repository contains my personal dotfiles to set up development environment across **Windows**, **Arch Linux**, **macOS**. Repository uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks.
+
+---
 
 ## Requirements
 
-Ensure you have the following installed on your system
+- [Git](https://git-scm.com/) - Windows / Linux / macOS
+- [GNU Stow](https://www.gnu.org/software/stow/) - Linux / macOS
 
-### Git
+## Tools to install  
 
-```
-pacman -S git
-```
+- [Chocolatey](https://chocolatey.org/) - Windows
+- [Homebrew](https://brew.sh/) - macOS
+- [Wezterm](https://wezterm.org/) - Windows / Linux / macOS
+- [NeoVIM](https://neovim.io/) - Windows / Linux / macOS
 
-### Stow
+## Creating symlinks  
 
-```
-pacman -S stow
-```
+On windows use custom script
 
-## Installation
-
-First, check out the dotfiles repo in your $HOME directory using git
+```pwsh
 
 ```
-$ git clone git@github.com/dreamsofautonomy/dotfiles.git
-$ cd dotfiles
+
+On macOS and Linux use GNU Stow to create symlinks.
+
+```bash
+stow .
 ```
 
-then use GNU stow to create symlinks
-
-```
-$ stow .
-```
-
-[Tutorial](https://www.youtube.com/watch?v=y6XCebnB9gs)
+trzeba tylko zrobić lazy sync i zainstalować gcc

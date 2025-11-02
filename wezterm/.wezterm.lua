@@ -6,7 +6,8 @@ local wezterm = require("wezterm")
 -- This will hold the configuration.
 local config = wezterm.config_builder()
 
-config.default_prog = { "powershell.exe", "-NoLogo" }
+-- Uncomment on windows
+-- config.default_prog = { "powershell.exe", "-NoLogo" }
 -- config.font = wezterm.font("JetBrainsMono Nerd Font")
 config.font_size = 16
 

@@ -1,0 +1,5 @@
+# App shortcuts
+
+ctrl - c : open -a 'Visual Studio Code'
+ctrl - t : open -a 'WezTerm'
+ctrl - b : open -a 'Firefox'

@@ -12,15 +12,16 @@ local config = wezterm.config_builder()
 config.font_size = 16
 
 config.enable_tab_bar = false
-config.window_decorations = "TITLE | RESIZE"
+--config.window_decorations = "TITLE | RESIZE"
+config.window_decorations = "RESIZE"
 
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 1
 
 if (os.getenv("XDG_CURRENT_DESKTOP") == "Hyprland") then
-  config.enable_wayland = false
+ config.enable_wayland = false
 else
-  config.enable_wayland = true
+ config.enable_wayland = true
 end
 
 --config.colors = {

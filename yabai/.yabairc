@@ -1,0 +1,34 @@
+#!/usr/bin/env sh
+
+# Załaduj scripting addition po restarcie Docka (jeśli masz skonfigurowane sudoers)
+yabai -m signal --add event=dock_did_restart action="yabai --load-sa"
+yabai --load-sa
+
+# Ustawienia podstawowe
+yabai -m config layout bsp
+yabai -m config window_placement second_child
+yabai -m config auto-balance on
+
+# Padding i odstępy
+yabai -m config top_padding 48 
+yabai -m config bottom_padding 12
+yabai -m config left_padding 12
+yabai -m config right_padding 12
+yabai -m config window_gap 12
+
+# Sterowanie myszą
+yabai -m config mouse_follows_focus on
+yabai -m config mouse_modifier alt
+yabai -m config mouse_action1 move      # alt + lewy przycisk = przenoszenie
+yabai -m config mouse_action2 resize    # alt + prawy przycisk = zmiana rozmiaru
+yabai -m mouse_drop_action swap
+
+# Opcjonalnie (jeśli chcesz, żeby focus śledził myszkę)
+# yabai -m config focus_follows_mouse autoraise
+
+# Wyłącz zarządzanie niektórymi aplikacjami
+yabai -m rule --add app="^Ustawienia systemowe$" manage=off
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Karabiner-Elements$" manage=off
+yabai -m rule --add app="^WezTerm$" manage=on
+

@@ -81,3 +81,4 @@ alias ls='ls --color'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+export PATH="$PATH:$HOME/Library/Application Support/MiKTeX/texmfs/install/bin/x86_64-darwin"

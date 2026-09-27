@@ -5,7 +5,7 @@ let mapleader='`'
 
 set ignorecase
 set smartcase
-set scrolloff=5
+set scrolloff=999
 set incsearch
 set visualbell
 
